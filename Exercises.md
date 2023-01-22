@@ -15,7 +15,7 @@ git init
 git add .
 git commit -m "Initial commit"
 
-# create git repository on Gitlab and push your newly created local repository to it
+# create git repository on GitHub and push your newly created local repository to it
 git remote add origin https://github.com/fsiegrist/devops-bootcamp-03-git.git
 git push -u origin main
 
