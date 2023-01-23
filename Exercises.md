@@ -30,7 +30,13 @@ git push -u origin main
 
 <details>
 <summary>Exercise 2: .gitignore </summary>
- <br />
+<br />
+
+You see that build folders and editor specific folders are in the repository and decide to ignore it as a best practice.
+
+Ignore .idea folder, .DS_Store, out and build folders
+
+Hint: remove from git cache first
 
 **create .gitignore file with following entries**
 ```sh
