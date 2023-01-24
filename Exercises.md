@@ -55,7 +55,7 @@ git rm -r --cached .idea
 git rm -r --cached out
 git rm -r --cached build
 
-# commit & push the changes
+# commit and push the changes
 git add .
 git commit -m "remove ignored files"
 git push
@@ -69,27 +69,39 @@ git push
 <summary>Exercise 3: Feature branch </summary>
  <br />
 
+Create a feature branch and change following:
+
+- Upgrade the logstash-logback-encoder version to 6.6
+- Add image to the index.html file (url: https://www.careeraddict.com/uploads/article/58721/illustration-group-people-team-meeting.jpg)
+
+You are done with the changes. So:
+
+- Check your changes using "git diff" and
+- Commit them if everything is correct. Note: There is a standard in your team to name commits with descriptive text.
+- Push your changes to your remote repository.
+
 **steps**
 ```sh
-# create feature branch
-git checkout -b feature/changes
+# create a feature branch
+git checkout -b feature/exercise-3
 
-# in build.gradle file, line 18, locate the "logstash-logback-encoder" library 
-# change version from '5.2' to '6.6'
+# in build.gradle upgrade the version of the "logstash-logback-encoder" library from '5.2' to '6.6'
 compile group: 'net.logstash.logback', name: 'logstash-logback-encoder', version: '6.6'
 
-# locate index.html file in src/main/webapp folder
-# on line 9, add the image url with 
-<img src="https://www.careeraddict.com/uploads/article/58721/illustration-group-people-team-meeting.jpg" width="" />
+# in src/main/webapp/index.html add the following image tag:
+<img src="https://www.careeraddict.com/uploads/article/58721/illustration-group-people-team-meeting.jpg" width="700" />
 
-# check and commit  changes
+# check and commit changes
 git diff
-git add .
-git commit -m "Upgrade logback library and add image url"
+git add build.gradle
+git commit -m "Upgrade logback library to version 6.6"
+git add src/main/webapp/index.html
+git commit -m "Add image"
 
-# pull remote changes and push your changes to remote
-git pull -r 
-git push
+# as this is a new feature branch there is no need to first pull remote changes
+
+# push new feature branch to remote and track the remote branch
+git push -u origin feature/exercise-3
 ```
 
 </details>
