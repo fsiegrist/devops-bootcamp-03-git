@@ -208,25 +208,38 @@ git push
 
 <details>
 <summary>Exercise 7: Revert commit </summary>
- <br />
+<br />
+
+Still on the bugfix branch. You also noticed a spelling mistake in the index.html file, so you want to fix that in the same branch.
+- Fix the spelling mistake and commit the fix
+
+You also want to update the image.
+- So also change the image url (src) in a separate commit.
+
+You are done with the changes:
+- Push both commits to the remote repository. 
+
+
+Your team members tell you the previous image was the correct one, so you want to undo it. But since you already pushed to remote, you must revert the change.
+- Revert the last commit and push your changes to remote repository
 
 **steps**
 ```sh
 # on bugfix branch
 
-# locate index.html in src/main/webapp, line 11 & fix spelling error
+# fix spelling error in src/main/webapp/index.html
 <li>Sarah - Full stack devloper</li>
 
 # commit change locally
 git add .
-git commit -m "Fix spelling error"
+git commit -m "Fix another typo"
 
-# locate index.html in src/main/webapp, line 11 & set image url
+# set image url in src/main/webapp/index.html to:
 <img src="https://3kcz333h8wih3px3rh3vhfv3-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/effective-meetings.jpg" width="" />
 
 # commit change locally
 git add .
-git commit -m "Set image url"
+git commit -m "Adjust image url"
 
 # push both commits to remote
 git push
