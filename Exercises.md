@@ -110,24 +110,34 @@ git push -u origin feature/exercise-3
 
 <details>
 <summary>Exercise 4: Bugfix branch </summary>
- <br />
+<br />
+
+You find out there is a bug in your project, so you need to fix it using a new bugfix branch:
+- Create a new bugfix branch
+- Fix the spelling error in Application.java file
+
+You are done with the changes. So:
+- Check your changes using "git diff" and
+- Commit them if everything is correct.
+- Push your changes to your remote repository.
 
 **steps**
 ```sh
 # create bugfix branch
-git checkout -b bugfix/changes
+git checkout -b bugfix/exercise-4
 
-# in Application.java file in src/main/java/com, line 22, fix the spelling error
+# fix the spelling error in src/main/java/com/Application.java
 log.info("Java app started");
 
-# check and commit  changes
+# check and commit changes
 git diff
 git add .
-git commit -m "Fix spelling error"
+git commit -m "Fix typo"
 
-# pull remote changes and push your changes to remote
-git pull -r 
-git push
+# as this is a new bugfix branch there is no need to first pull remote changes
+
+# push new bugfix branch to remote and track the remote branch
+git push -u origin bugfix/exercise-4
 ```
 
 </details>
