@@ -146,13 +146,16 @@ git push -u origin bugfix/exercise-4
 
 <details>
 <summary>Exercise 5: Merge request </summary>
- <br />
+<br />
+
+You are done with the feature, now it needs to be tested and deployed. So:
+- Merge your feature branch into master (using a merge request)
 
 **steps**
 ```sh
-# merge feature branch into master. Alternatively do the merge from Gitlab UI
-git checkout master
-git merge feature/changes 
+# merge feature branch into master. Alternatively do the merge from GitHub UI
+git checkout main
+git merge feature/exercise-3 
 
 # push the merge to remote master
 git push
@@ -164,27 +167,34 @@ git push
 
 <details>
 <summary>Exercise 6: Fix Merge conflict </summary>
- <br />
+<br />
+
+You are on the bugfix branch. You notice the logger library version is old, so:
+- Update it to version 6.2 (Change the same location in bugfix branch)
+
+Some time went by since you opened your bugfix branch, so you want the up-to-date master state to avoid major conflicts.
+- Merge the master branch in your bugfix branch - fix the merge conflict!
 
 **steps**
 ```sh
 # switch to bugfix branch
-git checkout bugfix/changes
+git checkout bugfix/exercise-4
 
-# in build.gradle file, line 18, locate the "logstash-logback-encoder" library 
-# change version from '5.2' to '6.2'
+# in build.gradle upgrade the version of the "logstash-logback-encoder" library from '5.2' to '6.2'
 compile group: 'net.logstash.logback', name: 'logstash-logback-encoder', version: '6.2'
 
 # commit change locally
 git add .
-git commit -m "upgrade logger library version"
+git commit -m "Upgrade logback library to version 6.2"
 
-# bring bugfix branch uptodate with master branch. Alternatively do the merge from Gitlab UI
-git merge master
+# bring bugfix branch uptodate with master branch. Alternatively do the merge from GitHub UI
+git merge main
 
-# you will get a merge conflict here for build.gradle file, like 18, logback library version 
+# you will get a merge conflict here for build.gradle file
 
-# fix merge conflict and when done check the state
+# fix merge conflict (open build.gradle file and keep master branch version) and when done check the state
+git add build.gradle
+git merge --continue
 git status
 
 # if all fixed, you can commit and push the merge into your bugfix branch
