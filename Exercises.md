@@ -286,7 +286,11 @@ git reset --hard HEAD~
 
 <details>
 <summary>Exercise 9: Merge </summary>
- <br />
+<br />
+
+This time you want to merge your branch directly into master without merge request. So:
+- merge your bugfix branch into master using git CLI (Hint: master branch must be up-to-date before the merge)
+- Being on the master branch now. Push your merge commit to remote repository
 
 **steps**
 ```sh
@@ -294,6 +298,8 @@ git reset --hard HEAD~
 git checkout master
 git merge bugfix/changes
 
+# push to remote
+git push
 ```
 
 </details>
