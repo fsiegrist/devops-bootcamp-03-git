@@ -44,7 +44,7 @@ Delete a local branch:<br />
 `git branch -d <branch-name>`
 
 Delete a remote branch:<br />
-`git push origin -d <branch-name>`
+`git push -d origin <branch-name>`
 
 </details>
 
