@@ -256,13 +256,20 @@ git push
 
 <details>
 <summary>Exercise 8: Reset commit </summary>
- <br />
+<br />
+
+You found 1 last thing you think must be fixed. Bruno just moved to DevOps team, so Bruno's role must be fixed.
+- Update the text accordingly
+- Commit that fix locally (don't push to remote)
+
+However after talking to a colleague, you find out it has already been fixed in another branch. So you want to undo your local commit.
+- Since commit is only locally, you can reset the commit.
 
 **steps**
 ```sh
-# on bugfix branch
+# checkout bugfix branch
 
-# locate index.html in src/main/webapp, line 15 & make change
+# make change in src/main/webapp/index.html
 <li>Bruno - DevOps engineer</li>
 
 # commit change locally
@@ -271,7 +278,6 @@ git commit -m "Adjust employee role description"
 
 # reset the last local commit, meaning move to the previous commit
 git reset --hard HEAD~
-
 ```
 
 </details>
