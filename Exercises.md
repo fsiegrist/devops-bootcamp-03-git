@@ -308,16 +308,22 @@ git push
 
 <details>
 <summary>Exercise 10: Delete Branches </summary>
- <br />
+<br />
+
+Now that you are done, both feature and bugfix got deployed and you want to cleanup the old branches.
+- Delete both branches both locally and remotely
 
 **steps**
 ```sh
-# delete branches remotely via Gitlab UI
+# delete branches remotely via GitHub UI
 
 # delete branches locally with CLI
-git branch -D bugfix/changes
-git branch -D feature/changes
+git branch -d feature/exercise-3
+git branch -d bugfix/exercise-4
 
+# if you didn't delete the branches remotely, delete them with CLI
+git push -d origin feature/exercise-3
+git push -d origin bugfix/exercise-4
 ```
 
 </details>
