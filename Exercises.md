@@ -1,3 +1,6 @@
+## Exercises
+<br />
+
 <details>
 <summary>Exercise 1: Clone and create new repository </summary>
 <br />
